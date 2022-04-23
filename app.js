@@ -21,6 +21,7 @@ app.get('/', async (req, res) => {
   res.send('Hello World');
 });
 app.use('/api/users', require('./routes/users'));
+app.use('/api/ports', require('./routes/ports'));
 app.use(errors);
 
 const port = process.env.PORT || 5000;
