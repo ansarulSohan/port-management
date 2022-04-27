@@ -5,11 +5,14 @@ const mongoose = require('mongoose');
  */
 
 const connecDB = () => {
-  mongoose.connect('mongo://localhost/port-management').then(() => {
-    console.log('connected to database').catch((err) => {
-      console.error(error);
+  mongoose
+    .connect('mongodb://localhost/port-management')
+    .then(() => {
+      console.log('connected to database');
+    })
+    .catch((err) => {
+      console.error(err);
     });
-  });
 };
 
 module.exports = { connecDB };
